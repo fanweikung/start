@@ -8,6 +8,7 @@ counter.inc()
 counter.dec()
 console.log(counter.getCount())
 
+/* destructure the functions; no need to preface */
 const {inc, dec, getCount} = require("./myModule")
 inc()
 inc()
