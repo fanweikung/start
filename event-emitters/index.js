@@ -28,14 +28,14 @@ console.log(`We have ${ticketManager.listenerCount("error")} listerner(s) for th
 const onBuy = () => {
   console.log("I will be removed soon")
 }
-// 2nd listener to test "off"
+// Add 2nd listener to test "off" with a named callback function "onBuy"
 ticketManager.on("buy", onBuy)
-console.log(`We added a new listener brnng the total count of the buy event to ${ticketManager.listenerCount("buy")}`)
+console.log(`We added a new listener bring the total count of the buy event to ${ticketManager.listenerCount("buy")}`)  
 ticketManager.buy("test@email.com", 20)
 
 // turn off the second listener
-ticketManager.off("buy", onBuy) /// the off function requires reference to the callcack function
-console.log(`Wwe now have ${ticketManager.listenerCount("buy")} listener(s) for the buy event`)
+ticketManager.off("buy", onBuy) // the off function requires reference to the callcack function
+console.log(`We now have ${ticketManager.listenerCount("buy")} listener(s) for the buy event`)
 ticketManager.buy("test@email.com", 20)
 
 // turn off all listener
