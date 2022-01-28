@@ -1,5 +1,5 @@
-process.stdout.write("Hello ");
-process.stdout.write("World \n\n\n");
+//process.stdout.write("Hello ");
+//process.stdout.write("World \n\n\n");
 
 const questions = [
     "What is your name?",
@@ -34,11 +34,6 @@ process.on("exit", () => {
     const [name, activity, lang] = answers;
 
     // template string honors white space
-    console.log(`
-    
-Thank you for your answers. 
-    
-    Go ${activity} ${name} you can write ${lang} code later
-    
-    `);
+    console.log(`Thank you for your answers. 
+    Go ${activity} ${name} you can write ${lang} code later`);
 });
