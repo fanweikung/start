@@ -1,6 +1,8 @@
 const fs = require("fs")
 const colorData = require("./assets/colors.json")
 
+// to be called from rename.js
+const appendFile = () => {
 colorData.colorList.forEach(c => {
     fs.appendFile("storage-files/color.md", `${c.color}: ${c.hex}\n`, err => {
         if (err) {
@@ -8,3 +10,7 @@ colorData.colorList.forEach(c => {
         }
     })
 })
+}
+
+appendFile()
+module.exports = { appendFile }
