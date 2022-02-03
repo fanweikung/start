@@ -14,4 +14,5 @@ inc()
 dec()
 console.log(getCount()) */
 
-module.exports = { inc, dec, getCount}
+const text = "Finished"
+module.exports = { inc, dec, getCount, text}
