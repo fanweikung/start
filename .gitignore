@@ -2,3 +2,4 @@
 *.zip
 *.class
 *.cache
+npm-demo/node_modules/
