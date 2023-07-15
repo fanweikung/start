@@ -1,7 +1,10 @@
 const waitTime = 3000;
 console.log(`setting a ${waitTime / 1000} second delay`);
 
-const timerFinished = () => console.log("done");
+const timerFinished = () => {
+  clearInterval(interval);
+  console.log("done");
+};
 
 setTimeout(timerFinished, waitTime);
 
@@ -12,4 +15,4 @@ const incTime = () => {
   console.log(`waiting ${currentTime / 1000} seconds`);
 };
 
-setInterval(incTime, waitInterval);
+const interval = setInterval(incTime, waitInterval);
